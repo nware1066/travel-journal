@@ -9,7 +9,6 @@ function App() {
 
       function getCountryName (e, countryCode) {
        let newCountry = getName(countryCode)
-        console.log(newCountry)
         setCountryNames(countryNames => {
          return [...countryNames, newCountry]
         })

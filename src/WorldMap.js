@@ -1,16 +1,19 @@
 import { VectorMap } from "react-jvectormap";
-import { getName} from "country-list"
 
 function WorldMap(props) {
 
-  const handleClick = (e, countryCode) => {
-      console.log(getName(countryCode))
+
+    // function handleClick(e) {
+    //     console.log('hello')
+    // }
+  function handleClick(e, countryCode) {
       props.getCountryName(e, countryCode)
   }
 
     return(
             <VectorMap
          map={"world_mill"}
+         backgroundColor="#3b96ce"
          containerStyle={{height: "100vh"}}
            regionStyle={{
               initial: {
