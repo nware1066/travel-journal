@@ -26,7 +26,7 @@ function App() {
          />
       </div>
       <div className="journal-container">
-        <h1>{countryNames}</h1>
+        <h1>{countryNames.join(', ')}</h1>
       </div>
       </div>
     </div>

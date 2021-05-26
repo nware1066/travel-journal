@@ -4,9 +4,9 @@
 }
 
 .map-container {
-  flex: 3 0 0%;
+  width: 75%;
 }
 
 .journal-container {
-  flex: 1 0 0%;
+  width: 25%;
 }

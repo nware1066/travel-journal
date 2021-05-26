@@ -6,8 +6,8 @@ function WorldMap(props) {
     // function handleClick(e) {
     //     console.log('hello')
     // }
-  function handleClick(e, countryCode) {
-      props.getCountryName(e, countryCode)
+  function handleClick(event, countryCode) {
+      props.getCountryName(event, countryCode)
   }
 
     return(
@@ -15,27 +15,30 @@ function WorldMap(props) {
          map={"world_mill"}
          backgroundColor="#3b96ce"
          containerStyle={{height: "100vh"}}
-           regionStyle={{
-              initial: {
-                    fill: 'aliceblue',
-                    "fill-opacity": 1,
-                    stroke: 'none',
-                    "stroke-width": 0,
-                    "stroke-opacity": 1
-                },
-                hover: {
-                    "fill-opacity": 0.8,
-                    cursor: 'pointer'
-                },
-                selected: {
-                    fill: 'seagreen'
-                },
-                selectedHover: {
-                }
-            }}
-         onRegionClick={handleClick}
+        regionStyle={{
+            initial: {
+                fill: 'aliceblue',
+                "fill-opacity": 1,
+                stroke: 'none',
+                "stroke-width": 0,
+                "stroke-opacity": 1
+            },
+            hover: {
+                "fill-opacity": 0.8,
+                cursor: 'pointer'
+            },
+            selected: {
+                fill: 'seagreen'
+            },
+            selectedHover: {
+            }
+        }}
+        onRegionClick={ function (event, countryCode) {
+            event.preventDefault()
+             handleClick(event, countryCode)
+             
+         }}
          regionsSelectable={true}
-       
        />
     )
 }
