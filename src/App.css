@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  
+}
+
+.map-container {
+  flex: 3 0 0%;
+}
+
+.journal-container {
+  flex: 1 0 0%;
+}
