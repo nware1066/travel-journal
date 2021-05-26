@@ -8,5 +8,13 @@
 }
 
 .journal-container {
+  display: flex;
   width: 25%;
+}
+
+.create-area-wrapper {
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  justify-content: center;
 }
