@@ -8,5 +8,48 @@
 }
 
 .journal-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   width: 25%;
+}
+
+.create-entry-wrapper {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+}
+
+.trip-card {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+
+.trip-card h {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.trip-card p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.trip-card button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+   background: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
 }
