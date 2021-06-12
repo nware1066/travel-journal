@@ -1,13 +1,17 @@
 import { VectorMap } from "react-jvectormap";
+import {useState} from 'react';
 
 function WorldMap(props) {
 
+    
+const [countryCodes, setCountryCodes] = useState([])
 
-    // function handleClick(e) {
-    //     console.log('hello')
-    // }
   function handleClick(event, countryCode) {
       props.getCountryName(event, countryCode)
+
+      setCountryCodes(countryCodes => {
+          return [...countryCodes, countryCode]
+        });
   }
 
     return(
@@ -15,6 +19,7 @@ function WorldMap(props) {
          map={"world_mill"}
          backgroundColor="#3b96ce"
          containerStyle={{height: "100vh"}}
+         selectedRegions={countryCodes}
         regionStyle={{
             initial: {
                 fill: 'aliceblue',
@@ -34,7 +39,6 @@ function WorldMap(props) {
             }
         }}
         onRegionClick={ function (event, countryCode) {
-            event.preventDefault()
              handleClick(event, countryCode)
              
          }}
@@ -42,5 +46,7 @@ function WorldMap(props) {
        />
     )
 }
+
+// (Event e, String code, Boolean isSelected, Array selectedRegions) Will be called when region is (de)selected. isSelected parameter of the callback indicates whether region is selected or not. selectedRegions contains codes of all currently selected regions.
 
 export default WorldMap;

@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function CreateEntry(props) {
 
 const [trip, setTrip] = useState({
+    date: '',
     name: '',
-    content: ''
+    content: '',
+    images: []
 }) 
-
 
 function handleChange(event) {
     const {name, value} = event.target;
@@ -19,34 +21,59 @@ function handleChange(event) {
     })
 }
 
-function createTrip(event) {
+function createTrip(event, index) {
     props.addTrip(trip)
         setTrip({
+            date: '',
             name: '',
-            content: ''
+            content: '',
+            pictures: [],
+            key: {index},
+            id: {index}
         })
         event.preventDefault();
 }
 
 return (
     <div className="create-entry-wrapper">
+        <div>
+      
         <form>
+            <input type="date" 
+                name="date"
+                placeholder="Date"
+                value={trip.date}
+                onChange={handleChange}
+            />
             <input 
-            type="text"
-            name="name"
-            placeholder="name of country"
-            value={trip.name}
-            onChange={handleChange}
+                type="text"
+                name="name"
+                placeholder="headline"
+                value={trip.name}
+                onChange={handleChange}
              />
-              <input 
-            type="text"
-            name="content"
-            placeholder="your notes"
-            value={trip.content}
-            onChange={handleChange}
+            <textarea
+                type="textarea"
+                name="content"
+                placeholder="your notes"
+                value={trip.content}
+                onChange={handleChange}
              />
-            <button onClick={createTrip}>Submit</button>
-        </form>
+             <input 
+                type="file"
+                name="image"
+                placeholder="upload your pictures here"
+                value={trip.pictures}
+                onChange={handleChange}
+             
+             />
+            <Link to='/'><button onClick={createTrip}>Submit</button></Link>
+        </form>    
+        </div>
+        <div className="journal-entry">
+            <h1>{trip.name}</h1>
+            <p>{trip.content}</p>
+        </div>
     </div>
 )
 
