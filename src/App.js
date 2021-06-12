@@ -2,7 +2,9 @@ import { getName } from "country-list"
 import { useState } from 'react';
 import './App.css';
 import Trip from "./Trip";
-// import CreateEntry from "./CreateEntry"
+import Trips from "./Trips";
+import { Route } from 'react-router-dom';
+import CreateEntry from "./CreateEntry"
 import WorldMap from './WorldMap'
 
 function App() {
@@ -26,33 +28,37 @@ function App() {
         return [...prevTrips, newTrip]
       })
     }
-    // passed to CreateEntry so that user input can create trip cards
+    // passed to CreateEntry so that user input can create journal entries
  
-
-
   return (
     <div className="App">
       <div className="main-container">
-      <div className="map-container">
-        <WorldMap
-        getCountryName={getCountryName}
-        
-         />
-      </div>
-      <div className="journal-container">
-        {countryNames.map((country, index) => {
-          return(<Trip
-          name={country}
-          // content={trip.content}
-          id={index}
-          key={index}
-          countryNames={countryNames}
-          />)
-        })}
-        {/* <CreateEntry 
-          addTrip={addTrip}
-        /> */}
-      </div>
+      <Route exact path='/'>
+        <div className="map-container">
+          <WorldMap
+            getCountryName={getCountryName}
+          />
+        </div>
+        <div className="journal-container">
+        <h1 className="journal-heading">click to view or edit</h1>
+          {countryNames.map((country, index) => {
+            return(<Trip
+              name={country}
+              id={index}
+              key={index}
+              countryNames={countryNames}
+            />)
+          })}
+        </div>
+        </Route>
+          <Route exact path="/createEntry">
+       
+              <CreateEntry 
+                addTrip={addTrip}
+                countryNames={countryNames}
+              />
+         
+          </Route>
       </div>
     </div>
   );
