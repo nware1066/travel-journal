@@ -53,3 +53,26 @@
   cursor: pointer;
   outline: none;
 }
+
+.image {
+  width: 18rem;
+  height: 22rem;
+  position: absolute;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, .4);
+  border-radius: .4rem;
+  border: .2rem solid #b85d1c;
+  left: 60%;
+  top: 10%;
+}
+
+.img-1 {
+  transform: translate(40%, 40%)
+}
+
+.img-2 {
+  transform: translate(60%, 60%)
+}
+
+.img-3 {
+  transform: translate(50%, 50%)
+}
