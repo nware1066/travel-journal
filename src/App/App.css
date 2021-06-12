@@ -1,0 +1,113 @@
+.main-container {
+  display: flex;
+  background-color: lightblue;
+  
+}
+
+.map-container {
+  width: 75%;
+}
+
+.card-container {
+  width: 25rem;
+  text-align: center;
+}
+
+.trip-card {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 15px 75px;
+  float: left;
+}
+
+.trip-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  color: goldenrod;
+}
+
+.trip-card button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+  background: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+.create-entry-wrapper {
+  display: flex;
+  flex-direction: columns;
+}
+
+.form-wrapper {
+  display: flex;
+  background-color: gray;
+}
+
+.journal-entry {
+  display: flex;
+  justify-content: space-around;
+  /* position: relative; */
+  width: 100%;
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+
+.journal-text {
+  position: relative;
+  width: 45rem;
+  margin: 4rem 2rem;
+}
+
+.journal-text h1 {
+  margin-top: 7rem;
+  text-align: center;
+} 
+
+.journal-text p {
+  border: .8px solid lightgray;
+  padding: 2rem;
+  margin-top: 5rem;
+  height: 30rem;
+  width: 40rem;
+  overflow-y: scroll;
+  background-color: rgb(250, 237, 217);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, .3);
+}
+
+.gallery {
+  position: relative;
+  top: 15rem;
+  float: left;
+  height: 450px;
+  width: 400px;
+}
+
+.image {
+  width: 18rem;
+  height: 22rem;
+  position: absolute;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, .4);
+  border-radius: .4rem;
+  border: .2rem solid #b85d1c;
+}
+
+.img-1 {
+  transform: translate(6%, 12%)
+}
+
+.img-2 {
+  transform: translate(23%, 30%)
+}
+
+.img-3 {
+  transform: translate(16%, 20%)
+}
