@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Trip from "../Components/Trip";
 import Trips from "../Components/Trips";
+import Login from "../Components/Login"
 import { Route } from 'react-router-dom';
 import CreateEntry from "../Components/CreateEntry"
 import WorldMap from '../Components/WorldMap'
@@ -32,6 +33,9 @@ function App() {
  
   return (
     <div className="App">
+        <Route exact path='/login'>
+          <Login />
+        </Route>
       <div className="main-container">
         <Route exact path='/'>
           <div className="map-container">
