@@ -39,8 +39,8 @@ function App() {
               getCountryName={getCountryName}
             />
           </div>
-          <div className="journal-container">
-            <h1 className="journal-heading">click to view or edit</h1>
+          <div className="card-container">
+            <h1 className="card-container-heading">click to view or edit</h1>
             {countryNames.map((country, index) => {
               return(<Trip
                 name={country}
@@ -51,13 +51,13 @@ function App() {
             })}
           </div>
           </Route>
-          <Route exact path="/createEntry">
-              <CreateEntry 
-                addTrip={addTrip}
-                countryNames={countryNames}
-              />
-          </Route>
-      </div>
+        </div>
+        <Route exact path="/createEntry">
+            <CreateEntry 
+              addTrip={addTrip}
+              countryNames={countryNames}
+            />
+        </Route>
     </div>
   );
 }
