@@ -6,9 +6,15 @@ function WorldMap(props) {
     
 const [countryCodes, setCountryCodes] = useState([])
 
-  function handleClick(event, countryCode) {
-      props.getCountryName(event, countryCode)
 
+
+  function handleClick(event, countryCode) {
+      setTimeout(() => {
+          Array.from(document.getElementsByClassName("jvectormap-tip")).forEach((el) => {
+              el.style.display = 'none'
+          });
+      }, 100);
+      props.getCountryName(event, countryCode)
       setCountryCodes(countryCodes => {
           return [...countryCodes, countryCode]
         });
