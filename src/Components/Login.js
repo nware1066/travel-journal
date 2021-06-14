@@ -4,8 +4,8 @@ function Login() {
   return (
     <div>
       <div class="forms-wrapper">
-        <label for="show-hide-forms" >&#10005;</label>
-        <input type="checkbox" id="show-form" h />
+        {/* <label for="show-hide-forms" hidden>&#10005;</label> */}
+        <input type="checkbox" id="show-form" hidden />
         <div class="show-btns-wrapper">
             <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
             <label for="show-form" class="show-form-btn show-login-form">Log In</label>

@@ -1,7 +1,10 @@
+html {
+  background-color: aliceblue;
+}
+
 .main-container {
   display: flex;
-  background-color: lightblue;
-  
+  background-color: #e1f5fe;
 }
 
 .map-container {
@@ -42,13 +45,14 @@
   outline: none;
 }
 
+/* user journal page */
+
 .create-entry-wrapper {
   display: flex;
   flex-direction: columns;
 }
 
 .form-wrapper {
-  display: flex;
   background-color: gray;
 }
 
@@ -76,8 +80,8 @@
   border: .8px solid lightgray;
   padding: 2rem;
   margin-top: 5rem;
-  height: 30rem;
-  width: 40rem;
+  height: 50vh;
+  width: 60vh;
   overflow-y: scroll;
   background-color: rgb(250, 237, 217);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, .3);
@@ -92,8 +96,8 @@
 }
 
 .image {
-  width: 18rem;
-  height: 22rem;
+  width: 15rem;
+  height: 19rem;
   position: absolute;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, .4);
   border-radius: .4rem;
@@ -115,7 +119,7 @@
 /* login */
 
 .forms-wrapper {
-  background-color: #eee;
+  background-color: #e1f5fe;
   position: fixed;
   top: 15%;
   left: 50%;
