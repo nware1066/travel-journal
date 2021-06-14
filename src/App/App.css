@@ -47,13 +47,10 @@ html {
 
 /* user journal page */
 
+
 .create-entry-wrapper {
   display: flex;
   flex-direction: columns;
-}
-
-.form-wrapper {
-  background-color: gray;
 }
 
 .journal-entry {
