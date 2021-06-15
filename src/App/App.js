@@ -5,7 +5,7 @@ import Trip from "../Components/Trip";
 import Trips from "../Components/Trips";
 import Login from "../Components/Login"
 import { Route } from 'react-router-dom';
-import CreateEntry from "../Components/CreateEntry"
+import JournalEntry from "../Components/JournalEntry"
 import WorldMap from '../Components/WorldMap'
 
 function App() {
@@ -57,7 +57,7 @@ function App() {
           </Route>
         </div>
         <Route exact path="/createEntry">
-            <CreateEntry 
+            <JournalEntry 
               addTrip={addTrip}
               countryNames={countryNames}
             />
