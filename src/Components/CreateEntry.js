@@ -1,32 +1,20 @@
 import React from 'react'
-import {useState} from 'react'
+// import {useState} from 'react'
 
-function CreateEntry() {
+function CreateEntry(props) {
 
-    // const [trip, setTrip] = useState({
-    //   date: "",
-    //   name: "",
-    //   content: "",
-    //   images: [],
-    // });
-
-const [trip, setTrip] = useState({
-  date: "",
-  name: "",
-  content: "",
-  images: [],
-});
-
-function handleChange(event) {
-  const { name, value } = event.target;
-
-  setTrip((prevValue) => {
-    return {
-      ...prevValue,
-      [name]: value,
-    };
-  });
-}
+    //   function createTrip(event, index) {
+    //     props.addTrip(trip);
+    //     setTrip({
+    //       date: "",
+    //       name: "",
+    //       content: "",
+    //       pictures: [],
+    //       key: { index },
+    //       id: { index },
+    //     });
+    //     event.preventDefault();
+    //   }
 
 
 
@@ -39,8 +27,8 @@ function handleChange(event) {
               type="date"
               name="date"
               placeholder="Date"
-              value={trip.date}
-              onChange={handleChange}
+              value={props.trip.date}
+              onChange={props.handleFormChange}
             />
           </div>
           <div className="input">
@@ -48,8 +36,8 @@ function handleChange(event) {
               type="text"
               name="name"
               placeholder="headline"
-              value={trip.name}
-              onChange={handleChange}
+              value={props.trip.name}
+              onChange={props.handleFormChange}
             />
           </div>
           <div className="input">
@@ -57,8 +45,8 @@ function handleChange(event) {
               type="textarea"
               name="content"
               placeholder="your notes"
-              value={trip.content}
-              onChange={handleChange}
+              value={props.trip.content}
+              onChange={props.handleFormChange}
             />
           </div>
           <div className="input">
@@ -66,8 +54,8 @@ function handleChange(event) {
               type="file"
               name="image"
               placeholder="upload your pictures here"
-              value={trip.pictures}
-              onChange={handleChange}
+              value={props.trip.pictures}
+              onChange={props.handleFormChange}
             />
           </div>
           <div className="input">
