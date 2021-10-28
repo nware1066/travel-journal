@@ -1,3 +1,10 @@
+# Travel Journal Project
+
+### This project is an attempt to create a project using express to provide some back-end function, and perhaps to use mongodb for a full stack project
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
