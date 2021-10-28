@@ -35,6 +35,7 @@ function JournalEntry(props) {
       <div className="journal-entry">
         <div className="journal-text">
           <h1>{trip.name}</h1>
+          <p>Test for GitHub</p>
           <p>{trip.content}</p>
         </div>
         <div className="gallery">
